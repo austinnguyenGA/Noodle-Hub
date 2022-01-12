@@ -18,11 +18,7 @@
 
     <p>Rating <%= noodle.rating %></p>
 
-    <% if (noodle.recommend) { %>
-    <p>I would recommend it</p>
-  <% } else { %>
-    <p>I would not recomment it</p>
-  <% } %>
+    <p>Review: <%= noodle.review %></p>
 
     <form form action="/noodle/<%=noodle._id; %>?_method=DELETE" method="POST">
       <input type="submit" value="DELETE" />

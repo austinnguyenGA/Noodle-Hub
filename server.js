@@ -1,8 +1,9 @@
 const express = require('express')
 const app = express()
-const PORT = 3000
 const Noodle = require('./models/noodle')
 const methodOverride = require ('method-override')
+require('dotenv').config()
+const PORT = process.env.PORT
 
 // Database connection
 const mongoose = require('mongoose')

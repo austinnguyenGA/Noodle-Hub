@@ -6,9 +6,9 @@ const noodleSchema = new Schema({
   restaurant: {type: String, required: true},
   description: {type: String, required: true},
   img: {type: String, required: true},
-  price: {type: Number, required: true},
-  rating: {type: Number, required: true},
-  recommend: {type: Boolean, required: true}
+  price: {type: String, required: true},
+  rating: {type: String, required: true},
+  review: {type: String, required: true}
 })
 
 const Noodle = model('Noodle', noodleSchema)

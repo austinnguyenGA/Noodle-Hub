@@ -74,7 +74,7 @@ router.post('/', (req, res) => {
 
 // EDIT
 
-router.put('/:id/edit', (req,res) => {
+router.get('/:id/edit', (req,res) => {
   Noodle.findById(req.params.id, (error, foundNoodle) => {
     if(error) {
       console.log(error)
@@ -90,7 +90,7 @@ router.put('/:id/edit', (req,res) => {
 // SHOW
 
 router.get('/:id', (req, res) => {
-  Noodle.findById(req.params,id, (error, foundNoodle) => {
+  Noodle.findById(req.params.id, (error, foundNoodle) => {
     console.log(foundNoodle)
     res.render('show.ejs', {noodle: foundNoodle})
   })
