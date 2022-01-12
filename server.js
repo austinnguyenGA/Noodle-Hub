@@ -7,7 +7,7 @@ const PORT = process.env.PORT
 
 // Database connection
 const mongoose = require('mongoose')
-const mongoURI = "mongodb://127.0.0.1:27017/"
+const mongoURI = process.env.MONGODB_URI
 const db = mongoose.connection
 
 mongoose.connect(mongoURI, {
