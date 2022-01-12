@@ -1,4 +1,4 @@
-const mongoose = requier('mongoose')
+const mongoose = require('mongoose')
 const { Schema, model } = mongoose
 
 const noodleSchema = new Schema({
@@ -8,9 +8,9 @@ const noodleSchema = new Schema({
   img: {type: String, required: true},
   price: {type: Number, required: true},
   rating: {type: Number, required: true},
-  wouldRecommend: {type: Boolean, required: true}
+  recommend: {type: Boolean, required: true}
 })
 
-const Noodle = model('Noodle', storeSchema)
+const Noodle = model('Noodle', noodleSchema)
 
 module.exports = Noodle

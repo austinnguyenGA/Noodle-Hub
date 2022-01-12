@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../style.css">
+    <title>Noodle Hub Index Page</title>
+  </head>
+  <body>
+    <h1>Noodle HUB</h1>
+    <ul>
+      <% for(let i = 0; i < noodle.length; i++) { %>
+        <p><a href="/noodle/<%=noodle[i]._id%>"><%= noodle[i].name %></a></p>
+        <% } %>
+
+    </ul>
+    <a class="" href="noodle/new">Add A Post</a>
+  </body>
+</html>

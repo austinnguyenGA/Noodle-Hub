@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const PORT = 3000
-const Noodle = require('./models/store')
+const Noodle = require('./models/noodle')
 const methodOverride = require ('method-override')
 
 // Database connection

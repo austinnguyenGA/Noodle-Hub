@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../style.css">
+    <title>Noodle Hub Show Page</title>
+  </head>
+  <body>
+    <h1><%= noodle.name %></h1>
+
+    <p><%= noodle.restaurant %></p>
+
+    <p><%= noodle.description %></p>
+
+     <img src="<%=noodle.img%>" alt="<%=noodle.name%>" width="400px"/>
+
+    <p>The Price is $<%= noodle.price %></p>
+
+    <p>Rating <%= noodle.rating %></p>
+
+    <% if (noodle.recommend) { %>
+    <p>I would recommend it</p>
+  <% } else { %>
+    <p>I would not recomment it</p>
+  <% } %>
+
+    <form form action="/noodle/<%=noodle._id; %>?_method=DELETE" method="POST">
+      <input type="submit" value="DELETE" />
+    </form>
+
+    <a href="/noodle/<%=noodle._id%>/edit">Update Post</a>
+    <br>
+    <a href="/noodle">Back to home page</a>
+  </body>
+</html>
