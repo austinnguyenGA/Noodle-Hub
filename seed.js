@@ -1,12 +1,12 @@
-const Store = require('./models/noodle')
+const Noodle = require('./models/noodle')
 const mongoose =require('mongoose')
 
 // connection to local
-const mongoURI = "mongodb://127.0.0.1:27017/"
+const mongoURI = "mongodb://127.0.0.1:27017/noodle"
 const db = mongoose.connection
 
 // connection to heroku
-// const monogoURI = 'mongodb://'
+// const mongoURI = 'mongodb+srv://austin9nguyen:rwwgldjl1@cluster0.krzpf.mongodb.net/noodle?retryWrites=true&w=majority'
 
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
