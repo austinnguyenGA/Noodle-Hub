@@ -59,10 +59,37 @@ h1 {
   text-align: right;
 }
 
-.newRoute {
-  
+.newRouteImage {
+    padding: 10px;
+    justify-content: space-between;
 }
 
+.showLeft {
+ display: grid;
+ text-align: left;
+ font-weight: bolder;
+ grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+ grid-gap: 2rem;
+
+}
+
+
+.showReview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-gap: 2rem;
+  text-align: left;
+}
+
+.showImg {
+  flex-wrap: wrap;
+}
+
+.showLinks {
+  padding: 10px;
+  justify-content: space-between;
+  display: flex;
+}
 /*
 .newPost {
   padding: 6px;
