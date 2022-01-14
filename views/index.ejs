@@ -1,17 +1,16 @@
 <%- include('./partials/header.ejs') %>
 
-    <a href="/users/register">Register</a>
-    <a href="/users/signin">Signin</a>
-    <a href="/users/signout">Signout</a>
-  </head>
-  <body>
-    <h1>Noodle HUB</h1>
-    <ul>
-      <% for(let i = 0; i < noodle.length; i++) { %>
-        <p><a href="/noodle/<%=noodle[i]._id%>"><%= noodle[i].name %></a></p>
-        <% } %>
-
-    </ul>
-    <a class="" href="noodle/new">Add A Post</a>
+<br>
+    <h1 class="Index">Noodle HUB <img src="https://stayhipp.com/wp-content/uploads/2020/10/ramen2.jpg" width=50px></h1>
+    <div class="wrapper">
+          <ul class="secondWrapper">
+            <% for(let i = 0; i < noodle.length; i++) { %>
+              <p><a href="/noodle/<%=noodle[i]._id%>"><%= noodle[i].name %></a></p>
+              <br>
+              <img class="indexPictures" src="<%= noodle[i].img %>" alt="">
+              <% } %>
+          </ul>
+    </div>
+    <!-- <a class="" href="noodle/new">Add A Post</a> -->
   </body>
 </html>
